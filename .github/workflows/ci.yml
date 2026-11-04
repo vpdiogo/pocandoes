@@ -12,6 +12,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
+      - run: npm test
       - run: npm run build
   collectors:
     runs-on: ubuntu-latest
@@ -22,3 +23,13 @@ jobs:
           python-version: '3.15.2'
       - run: pip install ./collectors
       - run: pocandoes-collector
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '26.13.0'
+          cache: npm
+      - run: npm ci
+      - run: npm audit --audit-level=high
