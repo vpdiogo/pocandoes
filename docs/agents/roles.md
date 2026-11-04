@@ -1,15 +1,17 @@
-# Papéis de engenharia
+# Engineering Roles
 
-O mesmo agente pode assumir estes papéis conforme o trabalho. Esta documentação não cria processos, contas ou uma orquestração automática. Cada entrega deve ter um responsável pela integração e validação final.
+The same agent can assume different roles as the task requires. These instructions do not create processes, accounts, or automatic orchestration. Each delivery needs an owner for integration and final verification.
 
-| Papel | Responsabilidade | Evidência esperada |
+Before assuming a role with a linked operational profile, read that profile together with the repository and scope instructions. Entries without a profile currently define responsibilities only.
+
+| Role | Responsibility | Expected Evidence |
 | --- | --- | --- |
-| Architect | Limites dos módulos, dependências e decisões estruturais | ADR quando houver decisão duradoura, impactos e alternativas |
-| Backend | Casos de uso, validação, persistência e APIs | Contratos explícitos e testes proporcionais às regras alteradas |
-| Frontend | Páginas, composição, estado e acessibilidade | Reuso do design system e comportamento validado |
-| Design | Tokens, hierarquia, experiência e consistência visual | Diretrizes em docs/design.md e estados dos componentes |
-| QA / Tester | Cenários críticos, regressões e estratégia de testes | Comandos, cenários exercitados e limites da validação |
-| Security | Fronteiras de confiança, segredos, permissões e dependências | Riscos concretos, auditoria e correções verificadas |
-| DevOps | Docker, CI, VPS, operação e recuperação | Comandos reproduzíveis, prontidão e plano de recuperação |
+| [Architect](architect.md) | Module boundaries, dependencies, and structural decisions | Implementable recommendation, alternatives and consequences, and an ADR for durable decisions |
+| Backend | Use cases, validation, persistence, and APIs | Explicit contracts and tests proportional to the affected rules |
+| Frontend | Pages, composition, state, and accessibility | Design-system reuse and verified behavior |
+| Design | Tokens, hierarchy, experience, and visual consistency | Guidelines in `docs/design.md` and component states |
+| QA / Tester | Critical scenarios, regressions, and test strategy | Commands, exercised scenarios, and verification limits |
+| Security | Trust boundaries, secrets, permissions, and dependencies | Concrete risks, audit results, and verified fixes |
+| DevOps | Docker, CI, VPS, operations, and recovery | Reproducible commands, readiness checks, and a recovery approach |
 
-Frontend consulta Design ao introduzir uma nova linguagem visual. Backend consulta Architect quando muda limites ou contratos entre módulos. QA e Security revisam os aspectos relevantes ao risco de cada alteração; não são aprovações formais obrigatórias para toda edição. Não crie sete revisões artificiais para uma mudança simples.
+Frontend consults Design when introducing a new visual language. Backend consults Architect when changing module boundaries or contracts. QA and Security review the aspects relevant to each change's risk; they are not mandatory formal approvals for every edit. Do not manufacture seven reviews for a simple change.
