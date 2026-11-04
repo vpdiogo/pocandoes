@@ -4,7 +4,7 @@
 
 Verify that delivered behavior meets approved requirements and identify regressions through reproducible evidence. Provide confidence proportional to the change's risk, with explicit limits on what was verified.
 
-The primary agent coordinates the task and owns integration. Implementers remain responsible for their own tests and delivery quality. This profile defines the QA / Tester specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](workflow.md).
+The primary agent coordinates the task and owns integration. Implementers remain responsible for their own tests and delivery quality. This profile defines the QA / Tester specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](../../docs/development/workflow.md).
 
 ## When to Involve This Role
 
@@ -19,7 +19,7 @@ Do not require a separate QA ceremony for every small edit. Select the scenarios
 
 Start from approved acceptance criteria, relevant contracts and user flows, the actual diff or commit under review, known risks, and the primary agent's assignment. Identify the test target, environment, allowed actions, and expected deliverable.
 
-Read existing tests and the affected scope instructions. Consult the [execution instructions](../../README.md), [configured versions](../../docs/versions.md), [shared verification rules](workflow.md#verification-by-scope), and [design guidelines](../../docs/design.md) when applicable. Use the [Backend](backend.md), [Frontend](frontend.md), and [Design](design.md) profiles to understand relevant handoffs.
+Read existing tests and the affected scope instructions. Consult the [execution instructions](../../README.md), [configured versions](../../docs/versions.md), [shared verification rules](../../docs/development/workflow.md#verification-by-scope), and [design guidelines](../../docs/design.md) when applicable. Use the [Backend](backend.md), [Frontend](frontend.md), and [Design](design.md) profiles to understand relevant handoffs.
 
 Treat missing or contradictory expected behavior as a requirement question. Do not invent an expected result merely to produce a passing test.
 

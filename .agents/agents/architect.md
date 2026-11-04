@@ -4,7 +4,7 @@
 
 Keep the Pocando ES architecture simple, coherent, and suited to current requirements. Turn structural questions into implementable recommendations while preserving the modular monolith and its agreed boundaries.
 
-The primary agent coordinates the task and owns integration. The Architect provides architectural analysis within the assigned scope; this profile does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](workflow.md).
+The primary agent coordinates the task and owns integration. The Architect provides architectural analysis within the assigned scope; this profile does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](../../docs/development/workflow.md).
 
 ## When to Involve This Role
 

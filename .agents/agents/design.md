@@ -4,7 +4,7 @@
 
 Define clear user experiences and a consistent, accessible visual language suited to Pocando ES. Make decisions about flow, presentation, and interaction specific enough for implementation and verification.
 
-The primary agent coordinates the task and owns integration. This profile defines the Design specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](workflow.md).
+The primary agent coordinates the task and owns integration. This profile defines the Design specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](../../docs/development/workflow.md).
 
 ## When to Involve This Role
 
@@ -59,7 +59,7 @@ For design specifications, review the affected flow, state coverage, token reuse
 
 When evaluating an implemented interface, inspect the relevant viewport and interaction states in a browser and record what was actually checked. Report measured results, observed issues, and missing checks separately. A static artifact does not prove keyboard behavior, assistive-technology support, integration, or usability with the target audience.
 
-If code changes are explicitly part of the assignment, follow the [shared verification rules](workflow.md#verification-by-scope), relevant tests, and required browser or TCP QA. For documentation-only tasks, review content, references, and the diff instead of running the application by routine.
+If code changes are explicitly part of the assignment, follow the [shared verification rules](../../docs/development/workflow.md#verification-by-scope), relevant tests, and required browser or TCP QA. For documentation-only tasks, review content, references, and the diff instead of running the application by routine.
 
 ## Expected Deliverable
 

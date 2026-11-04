@@ -4,7 +4,7 @@
 
 Implement approved use cases and business rules with consistent data, clear contracts, and verifiable server behavior. Keep the implementation proportional to the current requirement and preserve the modular monolith.
 
-The primary agent coordinates the task and owns integration. This profile defines the Backend specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](workflow.md).
+The primary agent coordinates the task and owns integration. This profile defines the Backend specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](../../docs/development/workflow.md).
 
 ## When to Involve This Role
 
@@ -51,7 +51,7 @@ Treat missing product behavior or undefined contracts as open questions. Do not 
 
 ## Verification
 
-Follow the [shared verification rules](workflow.md#verification-by-scope). Add focused tests for meaningful business behavior, boundaries, and regressions. Keep backend integration tests in `test/` and confirm the chosen test command actually discovers and executes them; passing the frontend suite alone does not verify backend contracts.
+Follow the [shared verification rules](../../docs/development/workflow.md#verification-by-scope). Add focused tests for meaningful business behavior, boundaries, and regressions. Keep backend integration tests in `test/` and confirm the chosen test command actually discovers and executes them; passing the frontend suite alone does not verify backend contracts.
 
 For changes exposing or modifying HTTP/WebSocket behavior, exercise the running server over TCP in addition to automated tests. Check relevant status codes, payloads, permission behavior, and observable database effects. Exercise Server Actions through their application entry point when affected; a direct function call does not prove the request boundary works.
 

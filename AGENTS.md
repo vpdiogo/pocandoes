@@ -8,8 +8,8 @@ Read these guides when their conditions apply; their policies are part of the re
 
 | When | Required reference |
 | --- | --- |
-| Planning or implementing a task, delegating, or reviewing work | [Agent workflow](.agents/agents/workflow.md) |
-| Selecting, creating, or triaging issues; starting autonomous work | [Issue policy](.agents/agents/issues.md) |
+| Planning or implementing a task, delegating, or reviewing work | [Agent workflow](docs/development/workflow.md) |
+| Selecting, creating, or triaging issues; starting autonomous work | [Issue policy](docs/development/issues.md) |
 | Choosing engineering specializations | [Roles](.agents/agents/roles.md) |
 | Creating or updating local specification artifacts | [Spec workspace rules](.agents/specs/.gitkeep.md) |
 | Installing or running the project | [README](README.md) and [versions](docs/versions.md) |
@@ -19,7 +19,7 @@ Read these guides when their conditions apply; their policies are part of the re
 
 Use the configured versions in manifests, lockfiles, `.nvmrc`, and `collectors/.python-version`; do not assume host defaults match. Consult installed-version documentation before using APIs or configuration. Next.js guides are in `node_modules/next/dist/docs/`, resolving the package from `apps/web`.
 
-AI artifacts live in `.agents/agents/` (profiles and operating guides), `.agents/skills/` (reusable skills), and `.agents/specs/` (ignored, per-spec workspaces). Keep all working artifacts for a specification inside `.agents/specs/<spec-name>/`; only `.agents/specs/.gitkeep.md` is versioned in that directory. Durable product documentation and ADRs remain in `docs/`.
+AI artifacts live in `.agents/agents/` (operational profiles and role index), `.agents/skills/` (reusable skills), and `.agents/specs/` (ignored, per-spec workspaces). Keep all working artifacts for a specification inside `.agents/specs/<spec-name>/`; only `.agents/specs/.gitkeep.md` is versioned in that directory. Durable product documentation and ADRs remain in `docs/`.
 
 ## Product and Architecture
 

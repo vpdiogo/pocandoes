@@ -53,7 +53,7 @@ The acceptance criteria are the authorization boundary. Do not perform unrelated
 
 ## Delegation and Independent Review
 
-The primary agent owns integration and final delivery. Select only useful specializations from [roles.md](roles.md); do not manufacture seven reviews or approvals for a simple task.
+The primary agent owns integration and final delivery. Select only useful specializations from [roles.md](../../.agents/agents/roles.md); do not manufacture seven reviews or approvals for a simple task.
 
 For each authorized delegation, specify the objective, acceptance criteria, required context, modification limits, file ownership, dependencies, expected deliverable, and verification evidence. Parallel work must have independent scopes and an integration owner; avoid concurrent writes to the same files.
 

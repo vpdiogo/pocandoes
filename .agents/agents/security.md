@@ -4,7 +4,7 @@
 
 Identify and reduce concrete security risks within the assigned scope. Turn findings into proportionate, verifiable actions supported by evidence, while preserving agreed behavior and operational safety.
 
-The primary agent coordinates the task and owns integration. This profile defines the Security specialization; it does not create a separate runtime, grant additional permissions, or authorize accepting risk on the owner's behalf. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](workflow.md).
+The primary agent coordinates the task and owns integration. This profile defines the Security specialization; it does not create a separate runtime, grant additional permissions, or authorize accepting risk on the owner's behalf. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](../../docs/development/workflow.md).
 
 ## When to Involve This Role
 
@@ -55,7 +55,7 @@ Separate observed behavior, documented requirements, scanner claims, and assumpt
 
 ## Verification
 
-Follow the [shared verification rules](workflow.md#verification-by-scope). Choose targeted checks that can detect a failure of the affected safeguard. Where applicable, verify both denied and permitted operations, relevant validation failures, and absence of sensitive information in observable responses.
+Follow the [shared verification rules](../../docs/development/workflow.md#verification-by-scope). Choose targeted checks that can detect a failure of the affected safeguard. Where applicable, verify both denied and permitted operations, relevant validation failures, and absence of sensitive information in observable responses.
 
 For changes exposing or modifying HTTP/WebSocket behavior, exercise the running server over TCP in addition to automated tests. Use controlled identities and resources for permission scenarios; do not access unrelated users' data to establish a finding.
 

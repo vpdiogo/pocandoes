@@ -4,7 +4,7 @@
 
 Keep development, CI, deployment, and operation reproducible, observable, and recoverable within the project's current needs. Deliver operational changes with clear prerequisites, verifiable outcomes, and a recovery approach proportional to their risk.
 
-The primary agent coordinates the task and owns integration. This profile defines the DevOps specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](workflow.md).
+The primary agent coordinates the task and owns integration. This profile defines the DevOps specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](../../docs/development/workflow.md).
 
 ## When to Involve This Role
 
@@ -61,7 +61,7 @@ Inspect actual tool versions, service state, resource availability, network poli
 
 ## Verification and Expected Deliverable
 
-Follow the [shared verification rules](workflow.md#verification-by-scope). A valid Compose file, built image, running PID, or open port does not prove the application works. For affected HTTP/WebSocket behavior, exercise the actual running server over TCP and verify relevant responses, connection behavior, and dependencies. Confirm database interaction when it is part of the workflow.
+Follow the [shared verification rules](../../docs/development/workflow.md#verification-by-scope). A valid Compose file, built image, running PID, or open port does not prove the application works. For affected HTTP/WebSocket behavior, exercise the actual running server over TCP and verify relevant responses, connection behavior, and dependencies. Confirm database interaction when it is part of the workflow.
 
 Check remote CI on the relevant revision when involved; a local command does not establish a remote check passed. For an authorized deployment, verify the actual target, including proxy or HTTPS behavior when affected. Distinguish configuration saved, runtime application, environment publication, and restoration in a new task. Do not claim each succeeded without evidence.
 

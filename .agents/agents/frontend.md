@@ -4,7 +4,7 @@
 
 Implement clear, accessible, and responsive interfaces connected to approved use cases. Deliver working user flows with consistent presentation, relevant interaction states, and verifiable integration.
 
-The primary agent coordinates the task and owns integration. This profile defines the Frontend specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](workflow.md).
+The primary agent coordinates the task and owns integration. This profile defines the Frontend specialization; it does not create a separate runtime or grant additional permissions. Follow the [repository instructions](../../AGENTS.md) and [agent workflow](../../docs/development/workflow.md).
 
 ## When to Involve This Role
 
@@ -53,7 +53,7 @@ Separate agreed behavior and actual integration from assumptions. Ask when missi
 
 ## Verification
 
-Follow the [shared verification rules](workflow.md#verification-by-scope). Keep focused frontend unit tests next to the code in `apps/web/src/**/*.test.ts` or `apps/web/src/**/*.test.tsx`. Exercise meaningful interaction, states, and regressions. Simulated DOM tests do not prove browser rendering or asynchronous Server Component integration.
+Follow the [shared verification rules](../../docs/development/workflow.md#verification-by-scope). Keep focused frontend unit tests next to the code in `apps/web/src/**/*.test.ts` or `apps/web/src/**/*.test.tsx`. Exercise meaningful interaction, states, and regressions. Simulated DOM tests do not prove browser rendering or asynchronous Server Component integration.
 
 For UI behavior changes, exercise the relevant flow in a browser: navigation, forms, keyboard operation, focus, visible feedback, contrast, responsive layouts, and long content or zoom where relevant. Record the scenarios and viewport conditions checked. Keep future browser end-to-end tests in `apps/web/e2e/` when such tests are part of the task.
 
