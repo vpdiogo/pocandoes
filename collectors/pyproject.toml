@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pocandoes-collector"
+version = "0.1.0"
+requires-python = ">=3.15"
+dependencies = []
+[project.scripts]
+pocandoes-collector = "pocandoes_collector:main"
