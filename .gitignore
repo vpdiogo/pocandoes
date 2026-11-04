@@ -157,4 +157,4 @@ build/
 
 # Local specification artifacts: keep only the directory instructions.
 /.agents/specs/*
-!/.agents/specs/gitkeep.md
+!/.agents/specs/.gitkeep.md
