@@ -11,7 +11,7 @@ Before assuming a role with a linked operational profile, read that profile toge
 | [Frontend](frontend.md) | Pages, composition, state, and accessibility | Working user flows, design-system reuse, verified integration, and browser evidence |
 | [Design](design.md) | Tokens, hierarchy, experience, and visual consistency | Implementable flow and visual specifications, states, responsive behavior, and accessibility criteria |
 | [QA / Tester](qa.md) | Critical scenarios, regressions, and test strategy | Risk-based scenarios, reproducible findings, distinct verification outcomes, and explicit limits |
-| Security | Trust boundaries, secrets, permissions, and dependencies | Concrete risks, audit results, and verified fixes |
+| [Security](security.md) | Trust boundaries, secrets, permissions, and dependencies | Evidence-backed findings, justified priorities, verified corrections, and explicit residual risk |
 | DevOps | Docker, CI, VPS, operations, and recovery | Reproducible commands, readiness checks, and a recovery approach |
 
 Frontend consults Design when introducing a new visual language. Backend consults Architect when changing module boundaries or contracts. QA and Security review the aspects relevant to each change's risk; they are not mandatory formal approvals for every edit. Do not manufacture seven reviews for a simple change.
