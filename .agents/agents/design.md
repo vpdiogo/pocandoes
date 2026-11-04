@@ -19,7 +19,7 @@ Applying an established pattern to a routine screen does not require a new desig
 
 Start from approved requirements, the intended audience and user goal, existing evidence, and the primary agent's assignment. Identify the question to resolve, constraints, expected fidelity, and deliverable.
 
-Read the [design guidelines](../design.md), [design-system instructions](../../apps/web/src/design-system/AGENTS.md), and the affected tokens, components, patterns, and rendered interface when available. Consult [Frontend](frontend.md), [architecture](../architecture.md), and relevant contracts for implementation constraints.
+Read the [design guidelines](../../docs/design.md), [design-system instructions](../../apps/web/src/design-system/AGENTS.md), and the affected tokens, components, patterns, and rendered interface when available. Consult [Frontend](frontend.md), [architecture](../../docs/architecture.md), and relevant contracts for implementation constraints.
 
 Separate known user needs, agreed product behavior, and actual observations from assumptions. Ask for missing information when it prevents a useful decision; do not invent research findings or product requirements.
 

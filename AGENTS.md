@@ -8,15 +8,18 @@ Read these guides when their conditions apply; their policies are part of the re
 
 | When | Required reference |
 | --- | --- |
-| Planning or implementing a task, delegating, or reviewing work | [Agent workflow](docs/agents/workflow.md) |
-| Selecting, creating, or triaging issues; starting autonomous work | [Issue policy](docs/agents/issues.md) |
-| Choosing engineering specializations | [Roles](docs/agents/roles.md) |
+| Planning or implementing a task, delegating, or reviewing work | [Agent workflow](.agents/agents/workflow.md) |
+| Selecting, creating, or triaging issues; starting autonomous work | [Issue policy](.agents/agents/issues.md) |
+| Choosing engineering specializations | [Roles](.agents/agents/roles.md) |
+| Creating or updating local specification artifacts | [Spec workspace rules](.agents/specs/gitkeep.md) |
 | Installing or running the project | [README](README.md) and [versions](docs/versions.md) |
 | Changing architecture or operations | [Architecture](docs/architecture.md) and [ADRs](docs/adr/README.md) |
 | Changing the interface | [Design guidelines](docs/design.md) and `apps/web/src/design-system/AGENTS.md` |
 | Reviewing dependencies or security findings | [Security notes](docs/security.md) |
 
 Use the configured versions in manifests, lockfiles, `.nvmrc`, and `collectors/.python-version`; do not assume host defaults match. Consult installed-version documentation before using APIs or configuration. Next.js guides are in `node_modules/next/dist/docs/`, resolving the package from `apps/web`.
+
+AI artifacts live in `.agents/agents/` (profiles and operating guides), `.agents/skills/` (reusable skills), and `.agents/specs/` (ignored, per-spec workspaces). Keep all working artifacts for a specification inside `.agents/specs/<spec-name>/`; only `.agents/specs/gitkeep.md` is versioned in that directory. Durable product documentation and ADRs remain in `docs/`.
 
 ## Product and Architecture
 

@@ -19,7 +19,7 @@ Do not require a separate QA ceremony for every small edit. Select the scenarios
 
 Start from approved acceptance criteria, relevant contracts and user flows, the actual diff or commit under review, known risks, and the primary agent's assignment. Identify the test target, environment, allowed actions, and expected deliverable.
 
-Read existing tests and the affected scope instructions. Consult the [execution instructions](../../README.md), [configured versions](../versions.md), [shared verification rules](workflow.md#verification-by-scope), and [design guidelines](../design.md) when applicable. Use the [Backend](backend.md), [Frontend](frontend.md), and [Design](design.md) profiles to understand relevant handoffs.
+Read existing tests and the affected scope instructions. Consult the [execution instructions](../../README.md), [configured versions](../../docs/versions.md), [shared verification rules](workflow.md#verification-by-scope), and [design guidelines](../../docs/design.md) when applicable. Use the [Backend](backend.md), [Frontend](frontend.md), and [Design](design.md) profiles to understand relevant handoffs.
 
 Treat missing or contradictory expected behavior as a requirement question. Do not invent an expected result merely to produce a passing test.
 

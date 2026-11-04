@@ -21,10 +21,10 @@ Start from the approved requirements or issue acceptance criteria and the primar
 
 Consult the relevant parts of:
 
-- [Architecture and operations](../architecture.md) and [existing ADRs](../adr/README.md).
+- [Architecture and operations](../../docs/architecture.md) and [existing ADRs](../../docs/adr/README.md).
 - The affected code, contracts, tests, and scoped `AGENTS.md` files.
-- [Configured versions](../versions.md), manifests, and lockfiles when evaluating dependencies or framework capabilities.
-- [Security notes](../security.md), deployment constraints, and [design guidelines](../design.md) when affected by the decision.
+- [Configured versions](../../docs/versions.md), manifests, and lockfiles when evaluating dependencies or framework capabilities.
+- [Security notes](../../docs/security.md), deployment constraints, and [design guidelines](../../docs/design.md) when affected by the decision.
 
 Separate confirmed requirements and observed code behavior from assumptions. Do not invent traffic estimates, capacity limits, product requirements, or operational guarantees. Ask for missing information only when it prevents a useful decision; otherwise state the assumption and its impact.
 
@@ -36,7 +36,7 @@ Separate confirmed requirements and observed code behavior from assumptions. Do 
 4. **Recommend a concrete design.** Assign responsibilities, define interactions and necessary contract changes, and explain why the recommendation meets the current requirement.
 5. **Assess consequences.** Identify compatibility, migration, security, testing, and operational impacts where relevant. Support claims with evidence and mark unresolved risks.
 6. **Hand off implementation.** Describe an ordered implementation path, affected areas, and checks that demonstrate the intended behavior. Distinguish work authorized now from decisions requiring owner input.
-7. **Record a durable decision when needed.** Follow the [ADR convention](../adr/README.md). Keep proposed and accepted decisions distinguishable; preserve existing decisions and link a replacement ADR when superseding one.
+7. **Record a durable decision when needed.** Follow the [ADR convention](../../docs/adr/README.md). Keep proposed and accepted decisions distinguishable; preserve existing decisions and link a replacement ADR when superseding one.
 
 ## Decision Rules and Limits
 

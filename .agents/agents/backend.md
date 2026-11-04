@@ -17,7 +17,7 @@ The primary agent coordinates the task and owns integration. This profile define
 
 Start from approved requirements or issue acceptance criteria, existing contracts, and the primary agent's assignment. Identify expected behavior, affected modules, modification limits, and verification criteria.
 
-Read the relevant code, tests, and scope instructions, especially [business modules](../../apps/web/src/modules/AGENTS.md) and [server infrastructure](../../apps/web/src/server/AGENTS.md). Consult [architecture and operations](../architecture.md), [ADRs](../adr/README.md), [configured versions](../versions.md), and [security notes](../security.md) when affected.
+Read the relevant code, tests, and scope instructions, especially [business modules](../../apps/web/src/modules/AGENTS.md) and [server infrastructure](../../apps/web/src/server/AGENTS.md). Consult [architecture and operations](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), [configured versions](../../docs/versions.md), and [security notes](../../docs/security.md) when affected.
 
 Treat missing product behavior or undefined contracts as open questions. Do not infer business rules from framework defaults or invent entities and tables before their use cases are agreed.
 

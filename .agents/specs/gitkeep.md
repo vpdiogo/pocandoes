@@ -1,0 +1,20 @@
+# Local Specification Workspaces
+
+This directory contains local working artifacts for specifications being implemented. Create one folder per specification, using a descriptive name:
+
+```text
+.agents/specs/
+├── gitkeep.md
+└── <spec-name>/
+    ├── spec.md
+    ├── plan.md
+    ├── tasks.md
+    └── other working artifacts as needed
+```
+
+- Keep all working artifacts for a specification inside its named folder: requirements drafts, plans, task breakdowns, notes, and verification evidence. Create only the artifacts the work needs.
+- Do not place working artifacts directly in the specs root. This `gitkeep.md` is the only versioned file in this directory.
+- Specification folders and their entire contents are ignored by Git. Do not force-add them, create exceptions, or commit copies elsewhere to bypass this rule.
+- These workspaces are local and may be absent from another checkout or task. For autonomous work, the associated GitHub issue remains authoritative for acceptance criteria, authorization, priority, and state. Interactive work may be authorized by the owner without an issue; follow the [shared workflow](../agents/workflow.md). Record relevant delivery evidence in the PR when one is created. Local files do not grant approval or replace the applicable workflow and issue policies.
+- Keep durable product architecture, accepted ADRs, and design guidance in `docs/`; update those documents when the approved work requires it.
+- Git ignore rules are not secret storage. Follow repository data-handling rules and preserve existing local workspaces when changing this layout.
