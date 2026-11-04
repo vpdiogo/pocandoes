@@ -1,0 +1,13 @@
+ .button {
+  min-block-size: var(--control-min-size);
+  min-inline-size: var(--control-min-size);
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 700;
+  cursor: pointer;
+}
+.button:hover:not(:disabled) { background: var(--color-accent-hover); }
+.button:disabled { opacity: 0.55; cursor: not-allowed; }

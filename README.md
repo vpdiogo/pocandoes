@@ -24,3 +24,9 @@ Os coletores Python requerem Python 3.15+. Instale com `python -m pip install -e
 Execute `npm run lint`, `npm run typecheck` e `npm run build`. `docker compose config` valida a configuração. As instruções para VPS, backup e restauração estão em [docs/architecture.md](docs/architecture.md). A modelagem de domínio, contratos de ingestão e coletores funcionais serão definidos posteriormente.
 
 A política de versões e as versões verificadas estão em [docs/versions.md](docs/versions.md). A imagem de desenvolvimento Python pode ser selecionada com `collectors/.python-version`; esse arquivo não instala o interpretador automaticamente.
+
+## Desenvolvimento com agentes e interface
+
+Comece por [AGENTS.md](AGENTS.md). Os [papéis de engenharia](docs/agents/roles.md) orientam o trabalho conforme a tarefa. Decisões duradouras ficam em [docs/adr](docs/adr/README.md); as [diretrizes visuais](docs/design.md) descrevem o design system interno.
+
+`npm test` executa os testes de componentes uma vez, inclusive na CI. A CI também executa `npm audit --audit-level=high`: alertas altos e críticos bloqueiam; os moderados conhecidos continuam documentados em [docs/security.md](docs/security.md).

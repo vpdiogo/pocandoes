@@ -1,0 +1,7 @@
+ .shell {
+  min-block-size: 100svh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-12) var(--space-6);
+}
+.content { inline-size: min(100%, var(--content-width)); }
