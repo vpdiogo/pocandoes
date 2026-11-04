@@ -8,7 +8,7 @@ Before assuming a role with a linked operational profile, read that profile toge
 | --- | --- | --- |
 | [Architect](architect.md) | Module boundaries, dependencies, and structural decisions | Implementable recommendation, alternatives and consequences, and an ADR for durable decisions |
 | [Backend](backend.md) | Use cases, validation, persistence, and APIs | Implemented behavior, clear contracts, focused tests, and server verification evidence |
-| Frontend | Pages, composition, state, and accessibility | Design-system reuse and verified behavior |
+| [Frontend](frontend.md) | Pages, composition, state, and accessibility | Working user flows, design-system reuse, verified integration, and browser evidence |
 | Design | Tokens, hierarchy, experience, and visual consistency | Guidelines in `docs/design.md` and component states |
 | QA / Tester | Critical scenarios, regressions, and test strategy | Commands, exercised scenarios, and verification limits |
 | Security | Trust boundaries, secrets, permissions, and dependencies | Concrete risks, audit results, and verified fixes |
