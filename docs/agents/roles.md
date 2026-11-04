@@ -7,7 +7,7 @@ Before assuming a role with a linked operational profile, read that profile toge
 | Role | Responsibility | Expected Evidence |
 | --- | --- | --- |
 | [Architect](architect.md) | Module boundaries, dependencies, and structural decisions | Implementable recommendation, alternatives and consequences, and an ADR for durable decisions |
-| Backend | Use cases, validation, persistence, and APIs | Explicit contracts and tests proportional to the affected rules |
+| [Backend](backend.md) | Use cases, validation, persistence, and APIs | Implemented behavior, clear contracts, focused tests, and server verification evidence |
 | Frontend | Pages, composition, state, and accessibility | Design-system reuse and verified behavior |
 | Design | Tokens, hierarchy, experience, and visual consistency | Guidelines in `docs/design.md` and component states |
 | QA / Tester | Critical scenarios, regressions, and test strategy | Commands, exercised scenarios, and verification limits |
