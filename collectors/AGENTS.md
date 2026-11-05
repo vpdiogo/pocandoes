@@ -1,5 +1,5 @@
-# Coletores Python
+# Python Collectors
 
-Use Python 3.15.2 conforme `.python-version`. O pacote ainda é um ponto de entrada sem coleta funcional. Mantenha coletores independentes do código Next. Defina contratos de ingestão em conjunto com os casos de uso antes de persistir dados.
+Use Python 3.15.2 as specified in `.python-version`. The package is currently an entry point without functional collection. Keep collectors independent of the Next.js code. Define ingestion contracts together with the use cases before persisting data.
 
-Ao adicionar fontes externas, trate limites, timeouts, repetição segura, duplicidade e proveniência. Use amostras locais para testes determinísticos e evite acessar serviços reais em testes unitários. Não grave dados pessoais ou credenciais nas fixtures.
+When adding external sources, handle limits, timeouts, safe retries, deduplication, and provenance. Use local samples for deterministic tests and avoid real-service access in unit tests. Do not store personal data or credentials in fixtures.

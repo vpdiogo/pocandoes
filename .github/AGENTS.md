@@ -1,5 +1,5 @@
-# Integração contínua
+# Continuous Integration
 
-Use as versões documentadas e a instalação pelo lockfile. Preserve os gates de lint, tipos, testes, build e auditoria. O teste do pacote Python ainda é uma verificação de instalação e execução do CLI; não representa coleta funcional ou cobertura de domínio.
+Use the documented versions and lockfile-based installation. Preserve the lint, type, test, build, and audit gates. The Python package check currently verifies CLI installation and execution; it does not demonstrate functional collection or domain coverage.
 
-Investigue falhas antes de mudar o gate. Não use `continue-on-error`, redução do escopo da auditoria ou remoção de verificações para mascarar problemas. Mudanças em workflows não comprovam sua execução no GitHub: registre separadamente os resultados locais e remotos.
+Investigate failures before changing a gate. Do not use `continue-on-error`, reduce audit scope, or remove checks to hide problems. Workflow changes do not prove execution on GitHub: report local and remote results separately.

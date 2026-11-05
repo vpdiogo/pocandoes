@@ -1,29 +1,33 @@
 # Pocando ES
 
-Agenda e guia cultural do Espírito Santo. A aplicação usa Next.js e PostgreSQL; os coletores são um projeto Python independente.
+A cultural agenda and guide for Espírito Santo. The application uses Next.js and PostgreSQL; collectors are an independent Python project.
 
-## Executar com Docker
+## Run with Docker
 
-Requisitos: Docker com Compose v2. Copie `.env.example` para `.env` e altere `POSTGRES_PASSWORD`. Execute:
+Requirements: Docker with Compose v2. Copy `.env.example` to `.env` and set `POSTGRES_PASSWORD` before starting:
 
 ```sh
 cp .env.example .env
 docker compose up -d --build
 ```
 
-A aplicação fica em http://localhost:3000 e o PostgreSQL em `localhost:5432`. As duas portas ficam acessíveis apenas no próprio host. Para encerrar sem remover os dados: `docker compose down`. Os dados persistem no volume `postgres18_data`.
+The application is available at http://localhost:3000 and PostgreSQL at `localhost:5432`. Both ports are accessible only from the host. Stop services without removing data with `docker compose down`. Data persists in the `postgres18_data` volume.
 
-## Desenvolver sem contêiner para o Next.js
+## Develop Next.js Outside Docker
 
-Requisitos: Node.js 26.13 e npm; para o banco, Docker Compose. Inicie apenas o banco com `docker compose up -d db`, instale as dependências com `npm ci` e execute `npm run dev`. Para conectar o Next ao banco, crie `apps/web/.env.local` com `DATABASE_URL` baseado no exemplo, usando a mesma senha do `.env`. Caracteres especiais na URL devem ser codificados como URL.
+Requirements: Node.js 26.13 and npm; Docker Compose for the database. Start only the database with `docker compose up -d db`, install dependencies with `npm ci`, and run `npm run dev`. To connect Next.js to the database, create `apps/web/.env.local` with `DATABASE_URL` based on the example, using the same password as `.env`. URL-encode special characters in the password.
 
-Os coletores Python requerem Python 3.15+. Instale com `python -m pip install -e ./collectors` e execute `pocandoes-collector`.
+Python collectors require Python 3.15+. Install with `python -m pip install -e ./collectors` and run `pocandoes-collector`.
 
-## Verificações
+## Verification
 
-Execute `npm run lint`, `npm run typecheck` e `npm run build`. `docker compose config` valida a configuração. As instruções para VPS, backup e restauração estão em [docs/architecture.md](docs/architecture.md). A modelagem de domínio, contratos de ingestão e coletores funcionais serão definidos posteriormente.
+Run `npm run lint`, `npm run typecheck`, `npm test`, and `npm run build`. `docker compose config` validates configuration. VPS, backup, and restoration instructions are in [docs/architecture.md](docs/architecture.md). Domain modeling, ingestion contracts, and functional collectors will be defined later.
 
-A política de versões e as versões verificadas estão em [docs/versions.md](docs/versions.md). A imagem de desenvolvimento Python pode ser selecionada com `collectors/.python-version`; esse arquivo não instala o interpretador automaticamente.
+The version policy and verified versions are in [docs/versions.md](docs/versions.md). `collectors/.python-version` selects the Python version for compatible tooling; it does not install the interpreter automatically.
+
+## Interface Language
+
+The platform UX/UI remains in Brazilian Portuguese. Its copy is centralized in `apps/web/src/locales/pt-BR.json`; source identifiers, comments, logs, and repository documentation use English. Do not translate interface copy when maintaining English repository content.
 
 ## Agent-assisted development and interface
 

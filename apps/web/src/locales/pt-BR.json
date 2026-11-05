@@ -1,0 +1,19 @@
+{
+  "site": {
+    "title": "Pocando ES",
+    "description": "Agenda e guia cultural do Espírito Santo."
+  },
+  "accessibility": {
+    "skipToContent": "Ir para o conteúdo"
+  },
+  "home": {
+    "eyebrow": "CULTURA CAPIXABA",
+    "comingSoon": "Estamos preparando um espaço para você descobrir o que acontece por aqui."
+  },
+  "notFound": {
+    "eyebrow": "ERRO 404",
+    "title": "Página não encontrada",
+    "description": "O endereço que você procurou não está disponível.",
+    "backHome": "Voltar para a página inicial"
+  }
+}

@@ -1,7 +1,7 @@
-# Aplicação web
+# Web Application
 
-Siga as instruções da raiz. `src/app` contém rotas, layouts e entradas do Next. `src/modules` contém módulos de negócio. `src/server` contém infraestrutura exclusiva do servidor. `src/design-system` contém tokens, componentes e padrões visuais compartilhados.
+Follow the repository instructions. `src/app` contains Next.js routes, layouts, and entry points. `src/modules` contains business modules. `src/server` contains server-only infrastructure. `src/design-system` contains shared tokens, components, and visual patterns.
 
-Mantenha Server Components como padrão; declare a fronteira cliente quando precisar de estado ou interação no navegador. Nunca importe banco ou variáveis secretas em código cliente. Handlers validam entradas e delegam casos de uso. Componentes de interface não consultam o banco.
+Use Server Components by default; introduce a client boundary when browser state or interaction requires it. Never import the database or secret environment variables into client code. Handlers validate input and delegate use cases. UI components do not query the database.
 
-Antes de alterar APIs ou configuração do Next, leia o guia relevante em `node_modules/next/dist/docs/`, resolvendo o pacote a partir deste diretório. Use os testes existentes e adicione cenários de comportamento ao mudar componentes interativos. Testes de Server Components assíncronos precisam de uma estratégia de integração ou navegador, pois o Vitest não os valida diretamente.
+Before changing Next.js APIs or configuration, read the relevant guide in `node_modules/next/dist/docs/`, resolving the package from this directory. Use existing tests and add behavioral scenarios when changing interactive components. Asynchronous Server Component tests require an integration or browser strategy, because Vitest does not validate them directly.

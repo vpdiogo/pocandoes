@@ -1,3 +1,3 @@
-# Módulos de negócio
+# Business Modules
 
-Mantenha os casos de uso e regras independentes de Next e React. Defina fronteiras de persistência e integrações conforme a necessidade real. Rotas chamam serviços; regras de negócio não importam componentes nem Server Actions. Não crie entidades, tabelas ou contratos antes de seus casos de uso serem acordados.
+Keep use cases and rules independent of Next.js and React. Define persistence and integration boundaries according to real needs. Routes invoke services; business rules must not import components or Server Actions. Do not create entities, tables, or contracts before their use cases are agreed.

@@ -1,3 +1,3 @@
-# Contratos
+# Contracts
 
-O formato de ingestão dos coletores será definido junto aos casos de uso e à modelagem do domínio.
+The collector ingestion format will be defined alongside the use cases and domain model.
