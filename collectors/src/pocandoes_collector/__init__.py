@@ -1,3 +1,5 @@
-"""Coletores do Pocando ES."""
+"""Cultural data collectors for Pocando ES."""
+
+
 def main() -> None:
-    print("Nenhum coletor configurado ainda.")
+    print("No collectors configured yet.")

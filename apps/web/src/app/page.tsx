@@ -1,15 +1,16 @@
 import { PageIntro } from "@/design-system/patterns/PageIntro";
 import { PageShell } from "@/design-system/patterns/PageShell";
+import messages from "@/locales/pt-BR.json";
 
 export default function Home() {
   return (
     <PageShell>
       <PageIntro
-        eyebrow="CULTURA CAPIXABA"
-        title="Pocando ES"
-        description="Agenda e guia cultural do Espírito Santo."
+        eyebrow={messages.home.eyebrow}
+        title={messages.site.title}
+        description={messages.site.description}
       >
-        <p>Estamos preparando um espaço para você descobrir o que acontece por aqui.</p>
+        <p>{messages.home.comingSoon}</p>
       </PageIntro>
     </PageShell>
   );

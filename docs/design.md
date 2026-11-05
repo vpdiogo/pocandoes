@@ -1,23 +1,25 @@
-# Diretrizes visuais
+# Design Guidelines
 
-## Direção inicial
+## Initial Direction
 
-A direção acordada é sóbria, com referências capixabas discretas e identidade evoluindo com o produto. A base usa fundo claro, verde escuro e terracota, com tipografia do sistema. A regionalidade aparece no nome, na linguagem e no conteúdo. Logotipo, ilustrações e uma identidade completa serão definidos em trabalho de design próprio.
+The agreed direction is sober, with discreet regional references and an identity that evolves with the product. The foundation uses a light background, dark green, and terracotta, with system typography. Regional identity appears in the name, language, and content. A logo, illustrations, and a complete identity will be defined in dedicated design work.
 
-## Organização
+## Organization
 
-`apps/web/src/design-system/tokens/tokens.css` é a fonte de cores semânticas, tipografia, espaços e dimensões. Componentes reutilizáveis ficam em `components`, composições em `patterns` e reset global em `styles`. Estilos de uma funcionalidade pertencem à própria funcionalidade, usando os tokens compartilhados.
+`apps/web/src/design-system/tokens/tokens.css` is the source for semantic colors, typography, spacing, and dimensions. Reusable components belong in `components`, compositions in `patterns`, and global resets in `styles`. Feature-specific styles belong to the feature and use the shared tokens.
 
-`Button` preserva atributos nativos e usa `type="button"` por padrão para evitar submissões acidentais. Eventos precisam de um chamador cliente. `PageShell` fornece o landmark principal e o destino do link de pular navegação; use uma vez por página. `PageIntro` fornece o único título h1 da página e sua apresentação.
+`Button` preserves native attributes and defaults to `type="button"` to avoid accidental form submission. Event handlers require a client caller. `PageShell` provides the main landmark and the skip-link target; use it once per page. `PageIntro` provides the page's single h1 and introductory content.
 
-## Acessibilidade e conteúdo
+Approved Brazilian Portuguese interface copy is stored in `apps/web/src/locales/pt-BR.json`, including metadata, navigation, and accessibility messages. Keep source identifiers and comments in English; do not translate the platform UI as part of repository-language cleanup.
 
-- Almejar WCAG 2.2 AA: contraste de 4,5:1 para texto normal e 3:1 para texto grande. Acentos usados como texto precisam atender a esse contraste.
-- Manter foco visível, operação por teclado, rótulos acessíveis e alvos de toque com pelo menos 44 px na base.
-- Usar linguagem direta em português brasileiro. Estados e erros não dependem apenas de cor.
-- Validar telas estreitas, zoom de 200%, conteúdo longo e orientação de paisagem sem perda de conteúdo. O layout é fluido, sem largura mínima fixa.
-- Evitar animações gratuitas. Se adicionadas, respeitar `prefers-reduced-motion`.
+## Accessibility and Content
 
-## Verificação
+- Target WCAG 2.2 AA: a contrast ratio of 4.5:1 for normal text and 3:1 for large text. Accent colors used for text must meet these requirements.
+- Preserve visible focus, keyboard operation, accessible labels, and touch targets of at least 44 px in the base components.
+- Use direct Brazilian Portuguese in the localized interface. States and errors must not rely on color alone.
+- Verify narrow screens, 200% zoom, long content, and landscape orientation without content loss. Layout is fluid, with no fixed minimum width.
+- Avoid unnecessary animation. Respect `prefers-reduced-motion` when adding motion.
 
-Os testes de Button exercitam teclado, estado desabilitado e submissão de formulário. Eles usam DOM simulado: contraste, foco visível, responsividade e leitor de tela ainda exigem revisão em navegador. Não atribuir conformidade WCAG apenas porque o lint e os testes passaram.
+## Verification
+
+Button tests exercise keyboard operation, the disabled state, and form submission. They use a simulated DOM: contrast, visible focus, responsiveness, and screen-reader behavior still require browser review. Do not claim WCAG conformance solely because lint and tests pass.

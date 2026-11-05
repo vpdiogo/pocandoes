@@ -1,29 +1,29 @@
-# Arquitetura e implantação
+# Architecture and Deployment
 
-O Next.js concentra interfaces e casos de uso. Organize regras futuras em `apps/web/src/modules`, independentes de rotas e componentes. PostgreSQL armazena os dados. Os coletores Python são processos separados; seu contrato de ingestão será definido junto à modelagem.
+Next.js contains the interfaces and use cases. Organize future business rules in `apps/web/src/modules`, independent of routes and components. PostgreSQL stores the data. Python collectors run as separate processes; their ingestion contract will be defined alongside the domain model.
 
 ## VPS
 
-Instale Docker e Compose, faça checkout do repositório e configure `.env` com senha forte e exclusiva. Execute `docker compose up -d --build` na raiz. A aplicação e o banco escutam somente no loopback da VPS. Configure um proxy HTTPS no host, por exemplo Caddy ou Nginx, encaminhando para `127.0.0.1:3000`; configure o domínio, DNS, certificados, firewall e renovação de certificados. Com Cloudflare, use TLS validado até a origem (Full strict) e evite cache de rotas autenticadas e dados personalizados. O Compose não configura o proxy automaticamente.
+Install Docker and Compose, check out the repository, and configure `.env` with a strong, unique password. Run `docker compose up -d --build` from the root. The application and database listen only on the VPS loopback interface. Configure a host HTTPS proxy, such as Caddy or Nginx, forwarding to `127.0.0.1:3000`; configure the domain, DNS, certificates, firewall, and certificate renewal. With Cloudflare, use validated TLS to the origin (Full strict) and avoid caching authenticated routes or personalized data. Compose does not configure the proxy automatically.
 
-Para atualizar, obtenha a revisão desejada, faça backup, execute `docker compose up -d --build` e verifique a aplicação e os logs com `docker compose logs --tail=100 web db`. Não há deploy automático: acesso à VPS e credenciais ainda dependem de configuração. Defina também monitoramento, atualização de imagens e agendamento dos coletores quando existirem.
+To update, obtain the intended revision, make a backup, run `docker compose up -d --build`, and check the application and logs with `docker compose logs --tail=100 web db`. No automatic deployment is configured: VPS access and credentials still require setup. Define monitoring, image updates, and collector scheduling when collectors exist.
 
-## Backup e restauração
+## Backup and Restoration
 
-Um backup lógico consistente pode ser criado na raiz com:
+Create a consistent logical backup from the repository root:
 
 ```sh
 docker compose exec -T db sh -c 'exec pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" -Fc' > pocandoes.dump
 ```
 
-Envie o arquivo por um canal seguro para armazenamento fora da VPS, com controle de acesso e retenção. Teste a restauração regularmente em um banco separado. Para restaurar em um banco de teste vazio chamado `pocandoes_restore`, previamente criado no mesmo servidor:
+Transfer the file securely to storage outside the VPS, with access controls and retention. Test restoration regularly in a separate database. To restore into an empty test database named `pocandoes_restore`, previously created on the same server:
 
 ```sh
 docker compose exec -T db sh -c 'exec pg_restore -U "$POSTGRES_USER" -d pocandoes_restore --no-owner --no-privileges' < pocandoes.dump
 ```
 
-A restauração no banco de produção pode substituir dados e deve seguir um procedimento de manutenção e recuperação validado. Nunca armazene credenciais no repositório.
+Restoring the production database can replace data and must follow a validated maintenance and recovery procedure. Never store credentials in the repository.
 
-## Versão do banco
+## Database Version
 
-O Compose usa PostgreSQL 18 e o volume `postgres18_data`, montado em `/var/lib/postgresql` conforme a imagem oficial. Volumes antigos de PostgreSQL 17 não são reutilizados nem removidos. Se houver dados anteriores, exporte com a versão anterior e restaure no banco novo; trocar somente a imagem não migra os dados.
+Compose uses PostgreSQL 18 and the `postgres18_data` volume, mounted at `/var/lib/postgresql` as required by the official image. Older PostgreSQL 17 volumes are neither reused nor removed. If older data exists, export it using the older version and restore it into the new database; changing the image alone does not migrate data.

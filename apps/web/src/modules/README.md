@@ -1,3 +1,3 @@
-# Módulos de domínio
+# Domain Modules
 
-Organize cada domínio aqui quando seus casos de uso forem definidos. Mantenha regras de negócio independentes de rotas, componentes e bibliotecas de interface; concentre o acesso a serviços externos e ao banco nas bordas de cada módulo.
+Organize each domain here when its use cases are defined. Keep business rules independent of routes, components, and UI libraries; concentrate external-service and database access at each module's boundaries.
