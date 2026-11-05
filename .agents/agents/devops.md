@@ -19,7 +19,7 @@ Use the existing VPS and modular-monolith approach unless an approved requiremen
 
 Start from the approved requirements, target environment, affected revision, allowed operations, and the primary agent's assignment. Identify affected services, persistent data, availability constraints, and the expected result.
 
-Read the [execution instructions](../../README.md), [configured versions](../../docs/versions.md), [architecture and operations](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), [infrastructure instructions](../../infra/AGENTS.md), [CI instructions](../../.github/AGENTS.md), and relevant configuration. Consult [security notes](../../docs/security.md) and platform-provided runtime guidance where applicable.
+Read the [execution instructions](../../README.md), [configured versions](../../docs/versions.md), [architecture and operations](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), [Dockerfile](../../infra/Dockerfile), [Compose configuration](../../compose.yaml), [CI workflow](../../.github/workflows/ci.yml), and other relevant configuration. Consult [security notes](../../docs/security.md) and platform-provided runtime guidance where applicable.
 
 Inspect actual tool versions, service state, resource availability, network policy, and credential-binding names before requesting configuration. Do not assume a saved draft is applied, that the local environment is production, or that a documented capability is currently available.
 

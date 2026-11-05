@@ -17,7 +17,7 @@ The primary agent coordinates the task and owns integration. This profile define
 
 Start from approved requirements or issue acceptance criteria, the intended user flow, existing backend contracts, and the primary agent's assignment. Identify affected routes, expected states, modification limits, and verification criteria.
 
-Read the relevant components, tests, and scope instructions, particularly the [web application](../../apps/web/AGENTS.md) and [design system](../../apps/web/src/design-system/AGENTS.md). Consult the [design guidelines](../../docs/design.md), [architecture](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), and [configured versions](../../docs/versions.md) when affected. Check the installed Next.js guides before relying on framework APIs or configuration.
+Read the relevant components, tests, and [design guidelines](../../docs/design.md). Consult [architecture](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), and [configured versions](../../docs/versions.md) when affected. Check the installed Next.js guides before relying on framework APIs or configuration.
 
 Separate agreed behavior and actual integration from assumptions. Ask when missing product behavior or an undefined contract prevents a useful implementation; do not invent either to complete a screen.
 

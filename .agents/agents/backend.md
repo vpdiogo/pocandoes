@@ -17,7 +17,7 @@ The primary agent coordinates the task and owns integration. This profile define
 
 Start from approved requirements or issue acceptance criteria, existing contracts, and the primary agent's assignment. Identify expected behavior, affected modules, modification limits, and verification criteria.
 
-Read the relevant code, tests, and scope instructions, especially [business modules](../../apps/web/src/modules/AGENTS.md) and [server infrastructure](../../apps/web/src/server/AGENTS.md). Consult [architecture and operations](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), [configured versions](../../docs/versions.md), and [security notes](../../docs/security.md) when affected.
+Read the relevant code, tests, and [business-module guidance](../../apps/web/src/modules/README.md). Consult [architecture and operations](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), [configured versions](../../docs/versions.md), and [security notes](../../docs/security.md) when affected.
 
 Treat missing product behavior or undefined contracts as open questions. Do not infer business rules from framework defaults or invent entities and tables before their use cases are agreed.
 
@@ -37,7 +37,7 @@ Treat missing product behavior or undefined contracts as open questions. Do not 
 - When authentication and authorization apply, enforce them on the server for every protected operation, including resource-level access. Do not trust client-supplied identity, roles, ownership, or hidden UI controls as authorization.
 - Implement transactions, concurrency handling, and safe repetition only where the use case requires them. Do not introduce generic infrastructure for hypothetical needs.
 - Use established project capabilities before adding dependencies. For external calls, consider bounded timeouts and failure behavior; retry only when the operation can be repeated safely under its contract.
-- Keep secrets and sensitive data out of responses, logs, fixtures, and source control. Follow the repository language policy for identifiers, comments, logs, documentation, and API messages.
+- Validate server configuration in the operations that require it. Keep secrets and sensitive data out of responses, logs, fixtures, and source control. Follow the repository language policy for identifiers, comments, logs, documentation, and API messages.
 - Scope data access and returned fields to the agreed operation. Preserve existing API and ingestion contracts unless the task explicitly authorizes a breaking change.
 
 ## Limits and Collaboration

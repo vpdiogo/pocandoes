@@ -65,7 +65,8 @@ Independent review is required in both implementation workflows. Review the actu
 - For increments exposing or changing HTTP/WebSocket behavior, perform end-to-end QA over TCP against the running server in addition to automated tests. Check the relevant status, payload, and behavior; exercise WebSocket connection and messages when applicable.
 - For UI changes, check keyboard operation, focus, contrast, and responsiveness. Simulated DOM tests do not replace browser QA. Report checks that could not be performed.
 - Documentation-only changes require review of content, references, and the diff; do not run the entire application by routine.
-- For Python collectors and infrastructure, follow their scope instructions. Do not present a CLI startup or configuration validation as functional end-to-end verification.
+- For Python collectors, follow the [collector architecture](../architecture.md#python-collectors) and use local samples for deterministic unit tests without real-service access. Keep personal data and credentials out of fixtures. The current CLI smoke check verifies package installation and execution, not functional collection.
+- For infrastructure, follow the [DevOps profile](../../.agents/agents/devops.md). Do not present configuration validation as functional end-to-end verification.
 
 ### Test Locations
 
@@ -74,6 +75,6 @@ Independent review is required in both implementation workflows. Review the actu
 | Backend integration tests for application, database, HTTP, or WebSocket contracts | `test/` |
 | Frontend unit tests | Next to the covered code in `apps/web/src/**/*.test.ts` or `apps/web/src/**/*.test.tsx` |
 | Future browser end-to-end tests | `apps/web/e2e/` |
-| Python collector tests | Follow `collectors/AGENTS.md` |
+| Python collector tests | Follow an existing collector test layout; agree a minimal layout and discoverable test command when adding the first tests |
 
 Do not create empty suites just to populate these locations. Favor focused behavioral tests and regressions over broad or redundant coverage. Report passed checks, failed checks, checks not run, and remaining limitations separately.
