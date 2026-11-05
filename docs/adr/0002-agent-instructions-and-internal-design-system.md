@@ -1,6 +1,6 @@
 # 0002 — Scoped Agent Instructions and an Internal Design System
 
-Status: accepted.
+Status: accepted. The scoped agent-instruction placement is superseded by [0003 — Centralized Agent Instructions](0003-centralized-agent-instructions.md); the design-system decision remains in effect.
 
 ## Context
 

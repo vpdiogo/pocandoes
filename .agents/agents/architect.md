@@ -22,7 +22,7 @@ Start from the approved requirements or issue acceptance criteria and the primar
 Consult the relevant parts of:
 
 - [Architecture and operations](../../docs/architecture.md) and [existing ADRs](../../docs/adr/README.md).
-- The affected code, contracts, tests, and scoped `AGENTS.md` files.
+- The affected code, contracts, tests, and relevant technical documentation.
 - [Configured versions](../../docs/versions.md), manifests, and lockfiles when evaluating dependencies or framework capabilities.
 - [Security notes](../../docs/security.md), deployment constraints, and [design guidelines](../../docs/design.md) when affected by the decision.
 

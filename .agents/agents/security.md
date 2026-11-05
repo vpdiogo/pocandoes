@@ -19,7 +19,7 @@ Scale analysis to the actual change. Do not require a full security audit for ev
 
 Start from the approved requirements, the primary agent's assignment, the affected code revision, and the allowed targets and activities. Identify relevant assets, entry points, data flows, permissions, and existing safeguards.
 
-Read the affected code, contracts, tests, configuration, and scoped instructions. Consult [architecture and operations](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), [security notes](../../docs/security.md), manifests, lockfiles, and actual deployment contents when relevant. Use current authoritative advisories or tool documentation to assess scanner findings.
+Read the affected code, contracts, tests, configuration, and relevant technical documentation. Consult [architecture and operations](../../docs/architecture.md), [ADRs](../../docs/adr/README.md), [security notes](../../docs/security.md), manifests, lockfiles, and actual deployment contents when relevant. Use current authoritative advisories or tool documentation to assess scanner findings.
 
 Separate observed behavior, documented requirements, scanner claims, and assumptions. Do not invent an exploit, deployment exposure, or root cause from an alert alone.
 

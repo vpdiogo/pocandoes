@@ -8,6 +8,8 @@ The agreed direction is sober, with discreet regional references and an identity
 
 `apps/web/src/design-system/tokens/tokens.css` is the source for semantic colors, typography, spacing, and dimensions. Reusable components belong in `components`, compositions in `patterns`, and global resets in `styles`. Feature-specific styles belong to the feature and use the shared tokens.
 
+Restrict global CSS to resets and global behavior; use CSS Modules for components and patterns. Keep business rules and data queries outside design-system components. Preserve native HTML attributes and semantics: buttons perform actions, links navigate, and event handlers cross an explicit client boundary. Add abstractions only when a clear usage pattern exists.
+
 `Button` preserves native attributes and defaults to `type="button"` to avoid accidental form submission. Event handlers require a client caller. `PageShell` provides the main landmark and the skip-link target; use it once per page. `PageIntro` provides the page's single h1 and introductory content.
 
 Approved Brazilian Portuguese interface copy is stored in `apps/web/src/locales/pt-BR.json`, including metadata, navigation, and accessibility messages. Keep source identifiers and comments in English; do not translate the platform UI as part of repository-language cleanup.

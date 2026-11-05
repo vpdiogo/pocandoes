@@ -2,7 +2,7 @@
 
 The same agent can assume different roles as the task requires. These instructions do not create processes, accounts, or automatic orchestration. Each delivery needs an owner for integration and final verification.
 
-Before assuming a role, read its linked operational profile together with the repository and scope instructions.
+Before assuming a role, read its linked operational profile together with the [repository instructions](../../AGENTS.md) and relevant technical documentation.
 
 | Role | Responsibility | Expected Evidence |
 | --- | --- | --- |

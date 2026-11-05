@@ -19,7 +19,7 @@ Do not require a separate QA ceremony for every small edit. Select the scenarios
 
 Start from approved acceptance criteria, relevant contracts and user flows, the actual diff or commit under review, known risks, and the primary agent's assignment. Identify the test target, environment, allowed actions, and expected deliverable.
 
-Read existing tests and the affected scope instructions. Consult the [execution instructions](../../README.md), [configured versions](../../docs/versions.md), [shared verification rules](../../docs/development/workflow.md#verification-by-scope), and [design guidelines](../../docs/design.md) when applicable. Use the [Backend](backend.md), [Frontend](frontend.md), and [Design](design.md) profiles to understand relevant handoffs.
+Read existing tests and the relevant technical documentation. Consult the [execution instructions](../../README.md), [configured versions](../../docs/versions.md), [shared verification rules](../../docs/development/workflow.md#verification-by-scope), and [design guidelines](../../docs/design.md) when applicable. Use the [Backend](backend.md), [Frontend](frontend.md), and [Design](design.md) profiles to understand relevant handoffs.
 
 Treat missing or contradictory expected behavior as a requirement question. Do not invent an expected result merely to produce a passing test.
 
@@ -37,7 +37,7 @@ Treat missing or contradictory expected behavior as a requirement question. Do n
 ## Execution and Evidence Rules
 
 - Keep checks repeatable and data isolated. Use local or test environments with controlled fixtures; never run cleanup against production or unrelated data.
-- Keep test locations consistent with the shared workflow: backend integration tests in `test/`, frontend unit tests beside their source in `.test.ts` or `.test.tsx` files, and future browser end-to-end tests in `apps/web/e2e/`. Follow the Python scope instructions for collector tests.
+- Keep test locations and collector test practices consistent with the shared workflow: backend integration tests in `test/`, frontend unit tests beside their source in `.test.ts` or `.test.tsx` files, and future browser end-to-end tests in `apps/web/e2e/`.
 - Confirm that the selected runner discovers the relevant tests. A frontend suite does not prove backend integration, and an exit code of zero with no intended tests executed does not establish correctness.
 - For changes exposing or modifying HTTP/WebSocket behavior, exercise the running server over TCP in addition to automated tests. Check relevant status codes, payloads, state changes, and connection or message behavior. A direct function call, PID, or open port is insufficient.
 - For interface changes, verify relevant navigation, forms, interaction states, keyboard operation, focus, contrast, and responsive behavior in a browser. Record viewport and other relevant conditions. Simulated DOM tests and screenshots do not prove the full user flow.

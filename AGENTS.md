@@ -2,7 +2,7 @@
 
 ## Scope and References
 
-The primary agent owns task understanding, coordination, integration, verification, and delivery. Follow session instructions and applicable nested `AGENTS.md` files. Instruction files and role descriptions do not start independent agents.
+The primary agent owns task understanding, coordination, integration, verification, and delivery. This is the repository's only `AGENTS.md`; follow session instructions, this guide, and the relevant linked documentation and role profiles. Instruction files and role descriptions do not start independent agents.
 
 Read these guides when their conditions apply; their policies are part of the repository instructions:
 
@@ -10,11 +10,11 @@ Read these guides when their conditions apply; their policies are part of the re
 | --- | --- |
 | Planning or implementing a task, delegating, or reviewing work | [Agent workflow](docs/development/workflow.md) |
 | Selecting, creating, or triaging issues; starting autonomous work | [Issue policy](docs/development/issues.md) |
-| Choosing engineering specializations | [Roles](.agents/agents/roles.md) |
+| Working on a specialized scope | [Roles](.agents/agents/roles.md) and the relevant operational profile |
 | Creating or updating local specification artifacts | [Spec workspace rules](.agents/specs/.gitkeep.md) |
 | Installing or running the project | [README](README.md) and [versions](docs/versions.md) |
 | Changing architecture or operations | [Architecture](docs/architecture.md) and [ADRs](docs/adr/README.md) |
-| Changing the interface | [Design guidelines](docs/design.md) and `apps/web/src/design-system/AGENTS.md` |
+| Changing the interface | [Design guidelines](docs/design.md) |
 | Reviewing dependencies or security findings | [Security notes](docs/security.md) |
 
 Use the configured versions in manifests, lockfiles, `.nvmrc`, and `collectors/.python-version`; do not assume host defaults match. Consult installed-version documentation before using APIs or configuration. Next.js guides are in `node_modules/next/dist/docs/`, resolving the package from `apps/web`.
@@ -57,7 +57,7 @@ Pocando ES is a cultural agenda and guide for Espírito Santo. It uses Next.js a
 - Root web commands: `npm run lint`, `npm run typecheck`, `npm test`, and `npm run build`. CI also runs `npm audit --audit-level=high`. Do not invent unavailable commands or disable assertions, rules, or gates to pass.
 - Keep moderate findings visible in the security notes; the CI threshold does not mean the audit is clean. A collector CLI smoke check does not demonstrate collection, and Compose validation does not demonstrate working services.
 - Never expose real secrets, `.env` files, dumps, or personal data in commits, logs, examples, or responses. Inspect credential presence without printing values. Preserve TLS, checksum verification, and environment-provided authentication.
-- Follow infrastructure instructions for data safety. Never remove persistent volumes to make startup pass.
+- Follow the [DevOps profile](.agents/agents/devops.md) for infrastructure and data safety. Never remove persistent volumes to make startup pass.
 
 ## Failures and Delivery
 
