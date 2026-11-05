@@ -25,8 +25,12 @@ Execute `npm run lint`, `npm run typecheck` e `npm run build`. `docker compose c
 
 A política de versões e as versões verificadas estão em [docs/versions.md](docs/versions.md). A imagem de desenvolvimento Python pode ser selecionada com `collectors/.python-version`; esse arquivo não instala o interpretador automaticamente.
 
-## Desenvolvimento com agentes e interface
+## Agent-assisted development and interface
 
-Comece por [AGENTS.md](AGENTS.md). Os [papéis de engenharia](docs/agents/roles.md) orientam o trabalho conforme a tarefa. Decisões duradouras ficam em [docs/adr](docs/adr/README.md); as [diretrizes visuais](docs/design.md) descrevem o design system interno.
+Start with [AGENTS.md](AGENTS.md). AI artifacts are organized in `.agents/agents/` (operational profiles and role index), `.agents/skills/` (reusable skills), and `.agents/specs/` (local specification workspaces).
 
-`npm test` executa os testes de componentes uma vez, inclusive na CI. A CI também executa `npm audit --audit-level=high`: alertas altos e críticos bloqueiam; os moderados conhecidos continuam documentados em [docs/security.md](docs/security.md).
+Read the [engineering roles](.agents/agents/roles.md) for responsibilities and the [spec workspace rules](.agents/specs/.gitkeep.md) before creating a specification folder. All working artifacts for a spec belong in `.agents/specs/<spec-name>/` and are ignored by Git; only the directory instructions are versioned. For autonomous work, the associated GitHub issue remains the source of authorization, acceptance criteria, priority, and issue state. Interactive work may be authorized by the owner without an issue, following the shared workflow.
+
+Development procedures are documented in the [workflow guide](docs/development/workflow.md) and [issue policy](docs/development/issues.md).
+
+Durable architectural decisions remain in [docs/adr](docs/adr/README.md); [design guidelines](docs/design.md) describe the internal design system. `npm test` runs component tests once, including in CI. CI also runs `npm audit --audit-level=high`: high and critical findings block it; known moderate findings remain documented in [docs/security.md](docs/security.md).
