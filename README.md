@@ -2,6 +2,10 @@
 
 A cultural agenda and guide for Espírito Santo. The application uses Next.js and PostgreSQL; collectors are an independent Python project.
 
+## Publish the Coming-soon Page
+
+The static page for `pocandoes.com.br` has its own Caddy deployment with automatic HTTPS. Follow the [coming-soon guide](docs/coming-soon.md) for DNS, publication, updates, and verification. Once DNS points to the VPS and ports 80 and 443 are available, run `docker compose -f compose.coming-soon.yaml up -d --build` from the repository root.
+
 ## Run with Docker
 
 Requirements: Docker with Compose v2. Copy `.env.example` to `.env` and set `POSTGRES_PASSWORD` before starting:
@@ -27,7 +31,7 @@ The version policy and verified versions are in [docs/versions.md](docs/versions
 
 ## Interface Language
 
-The platform UX/UI remains in Brazilian Portuguese. Its copy is centralized in `apps/web/src/locales/pt-BR.json`; source identifiers, comments, logs, and repository documentation use English. Do not translate interface copy when maintaining English repository content.
+The platform UX/UI remains in Brazilian Portuguese. Its copy is centralized in `apps/web/src/locales/pt-BR.json` and `apps/coming-soon/locales/pt-BR.json`; source identifiers, comments, logs, and repository documentation use English. Do not translate interface copy when maintaining English repository content.
 
 ## Agent-assisted development and interface
 

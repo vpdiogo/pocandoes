@@ -10,6 +10,8 @@ Use the version pinned in `collectors/.python-version`. The current package is a
 
 ## VPS
 
+The initial domain publication uses a [separate static coming-soon deployment](coming-soon.md). The application and database procedure below applies when deploying the platform; it is not required for the coming-soon page.
+
 Install Docker and Compose, check out the repository, and configure `.env` with a strong, unique password. Run `docker compose up -d --build` from the root. The application and database listen only on the VPS loopback interface. Configure a host HTTPS proxy, such as Caddy or Nginx, forwarding to `127.0.0.1:3000`; configure the domain, DNS, certificates, firewall, and certificate renewal. With Cloudflare, use validated TLS to the origin (Full strict) and avoid caching authenticated routes or personalized data. Compose does not configure the proxy automatically.
 
 To update, obtain the intended revision, make a backup, run `docker compose up -d --build`, and check the application and logs with `docker compose logs --tail=100 web db`. No automatic deployment is configured: VPS access and credentials still require setup. Define monitoring, image updates, and collector scheduling when collectors exist.
