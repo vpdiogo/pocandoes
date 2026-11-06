@@ -12,6 +12,7 @@ Prefer current stable releases and the current Node.js LTS line. Confirm compati
 | PostgreSQL client (`pg`) | 8.23.1 |
 | TypeScript | 7.0.2 |
 | ESLint | 10.14.0 |
+| Caddy (coming-soon runtime) | 2.11.9, Alpine image pinned by digest |
 
 Versions are pinned to reproduce installation. This does not automatically update local installations; use `.nvmrc`, `collectors/.python-version`, Docker, and the configured CI. Transitive dependencies may use older versions required by plugins; see [security notes](security.md) for the outstanding lint dependency findings.
 

@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "npm --workspace @pocandoes/web run dev",
     "build": "npm --workspace @pocandoes/web run build",
+    "build:coming-soon": "node apps/coming-soon/build.mjs",
     "lint": "npm --workspace @pocandoes/web run lint",
     "typecheck": "npm --workspace @pocandoes/web run typecheck",
     "test": "npm --workspace @pocandoes/web run test"

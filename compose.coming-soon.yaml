@@ -1,0 +1,25 @@
+name: pocandoes-coming-soon
+
+services:
+  coming-soon:
+    build:
+      context: .
+      dockerfile: infra/coming-soon/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    healthcheck:
+      test: ["CMD", "wget", "-Y", "off", "-q", "--spider", "http://127.0.0.1:8080/robots.txt"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  caddy_data:
+  caddy_config:

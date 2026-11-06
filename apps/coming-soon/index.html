@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{pageTitle}}</title>
+    <meta name="description" content="{{description}}" />
+    <meta name="theme-color" content="#fbf8f1" />
+    <link rel="canonical" href="https://pocandoes.com.br/" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/tokens.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="{{siteName}}" />
+    <meta property="og:title" content="{{pageTitle}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:url" content="https://pocandoes.com.br/" />
+    <meta property="og:image" content="https://pocandoes.com.br/assets/share-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{{shareImageAlt}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">{{skipToContent}}</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <span class="wordmark">{{siteName}}<span class="brand-dot" aria-hidden="true">.</span></span>
+        <span class="status"><span class="status-dot" aria-hidden="true"></span>{{status}}</span>
+      </header>
+      <main id="main-content" class="hero" tabindex="-1">
+        <div class="hero-copy">
+          <p class="eyebrow">{{eyebrow}}</p>
+          <h1>{{headline}}</h1>
+          <p class="description">{{description}}</p>
+          <div class="signature" aria-hidden="true"></div>
+        </div>
+        <svg class="landscape" viewBox="0 0 440 500" aria-hidden="true" focusable="false">
+          <circle class="sun" cx="312" cy="136" r="48" />
+          <path class="landscape-outline" d="M30 370C80 340 105 283 140 257C169 235 175 201 190 201C205 201 207 235 224 246C260 267 278 328 318 345C350 359 376 357 410 370" />
+          <path class="landscape-line" d="M30 390C95 369 140 410 207 389S321 368 410 390M30 418C95 397 140 438 207 417S321 396 410 418M30 446C95 425 140 466 207 445S321 424 410 446" />
+          <path class="landscape-detail" d="M175 238L190 201L207 237" />
+        </svg>
+      </main>
+      <footer class="site-footer">
+        <p>{{location}}</p>
+        <p>{{footer}}</p>
+      </footer>
+    </div>
+  </body>
+</html>
